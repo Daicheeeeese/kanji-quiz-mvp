@@ -1,0 +1,22 @@
+{
+  "name": "jukugo-learning",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "next": "^14.x.x",
+    "openai": "^4.85.2",
+    "react": "^18.x.x",
+    "react-dom": "^18.x.x",
+    "wanakana": "^5.3.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.10",
+    "typescript": "5.7.3"
+  }
+}
