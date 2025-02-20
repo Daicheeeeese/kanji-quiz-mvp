@@ -114,7 +114,7 @@ export default function Home() {
     if (isRomaji) {
       const normalizedValue = value.toLowerCase();
       setInput(normalizedValue);
-      lastInputRef.current = normalizedValue; // 最後の入力を保存
+      lastInputRef.current = normalizedValue; // 最後の入力を
     } else {
       setInput(value);
       lastInputRef.current = value;
@@ -355,7 +355,7 @@ export default function Home() {
   }
 
   return (
-    <div 
+    <div
       className="min-h-screen p-4 sm:p-6 md:p-8 flex items-center justify-center" 
       style={{ backgroundColor: themeColors.background }}
     >
@@ -433,20 +433,6 @@ export default function Home() {
                     <p style={{ color: themeColors.text.secondary }}>
                       正しい読み方: {result.expected}
                     </p>
-                  </div>
-                )}
-                {currentVocab && (
-                  <div className="mt-4 p-4 bg-white rounded shadow">
-                    <div className="mb-4">
-                      <p className="text-lg font-semibold mb-2">意味 / Sens:</p>
-                      <p className="text-gray-700 mb-1">🇯🇵 {currentVocab.meaning.ja}</p>
-                      <p className="text-gray-700 italic">🇫🇷 {currentVocab.meaning.fr}</p>
-                    </div>
-                    <div>
-                      <p className="text-lg font-semibold mb-2">例文 / Exemple:</p>
-                      <p className="text-gray-700 mb-1">🇯🇵 {currentVocab.example.ja}</p>
-                      <p className="text-gray-700 italic">🇫🇷 {currentVocab.example.fr}</p>
-                    </div>
                   </div>
                 )}
               </div>
