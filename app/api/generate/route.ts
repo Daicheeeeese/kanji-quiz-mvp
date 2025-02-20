@@ -1,9 +1,8 @@
-import { Configuration, OpenAIApi } from 'openai';
+import OpenAI from 'openai';
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 export async function POST(req: Request) {
   try {
@@ -24,7 +23,7 @@ ${previousWords.length > 0 ? `- 以下の熟語は除外してください：${p
 }
 `;
 
-    const response = await openai.createChatCompletion({
+    const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
         {
@@ -39,7 +38,7 @@ ${previousWords.length > 0 ? `- 以下の熟語は除外してください：${p
       temperature: 0.7,
     });
 
-    const content = response.data.choices[0].message?.content;
+    const content = response.choices[0].message?.content;
     if (!content) {
       throw new Error('No content in response');
     }
