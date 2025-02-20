@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "next": "^14.x.x",
+    "next": "^15.1.7",
     "openai": "^4.85.2",
     "react": "^18.x.x",
     "react-dom": "^18.x.x",
